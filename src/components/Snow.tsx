@@ -67,18 +67,19 @@ export default function Snow() {
       animationId = requestAnimationFrame(animate);
     }
 
-    resize();
-    createFlakes();
-    animate();
-
-    window.addEventListener("resize", () => {
+    function handleResize() {
       resize();
       createFlakes();
-    });
+    }
+
+    handleResize();
+    animate();
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

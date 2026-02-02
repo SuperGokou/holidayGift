@@ -16,7 +16,6 @@ function getTimeUntilChristmas(): TimeLeft {
   if (now >= christmas) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   }
-
   const diff = christmas.getTime() - now.getTime();
   return {
     days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -39,30 +38,23 @@ export default function Countdown() {
   const segments = [
     { value: time.days, label: "Days" },
     { value: time.hours, label: "Hours" },
-    { value: time.minutes, label: "Min" },
-    { value: time.seconds, label: "Sec" },
+    { value: time.minutes, label: "Mins" },
+    { value: time.seconds, label: "Secs" },
   ];
 
   return (
-    <div className="flex items-center gap-2 sm:gap-3">
-      {segments.map((seg, i) => (
-        <div key={seg.label} className="flex items-center gap-2 sm:gap-3">
-          <div className="flex flex-col items-center">
-            <span
-              className="font-countdown text-2xl sm:text-4xl font-light tracking-wider text-white tabular-nums"
-              style={{ fontVariantNumeric: "tabular-nums" }}
-            >
-              {String(seg.value).padStart(2, "0")}
-            </span>
-            <span className="font-body text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/40 mt-1">
-              {seg.label}
-            </span>
-          </div>
-          {i < segments.length - 1 && (
-            <span className="text-white/20 text-xl sm:text-2xl font-light -mt-4">
-              :
-            </span>
-          )}
+    <div className="flex items-start gap-4 sm:gap-6">
+      {segments.map((seg) => (
+        <div key={seg.label} className="flex flex-col items-center gap-1">
+          <span
+            className="font-countdown text-4xl sm:text-5xl font-bold text-white tabular-nums"
+            style={{ fontVariantNumeric: "tabular-nums" }}
+          >
+            {String(seg.value).padStart(2, "0")}
+          </span>
+          <span className="font-body text-[10px] sm:text-xs uppercase tracking-[0.6px] text-white/60">
+            {seg.label}
+          </span>
         </div>
       ))}
     </div>
