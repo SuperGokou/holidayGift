@@ -1,0 +1,31 @@
+{
+  "years": [
+    {
+      "year": 2025,
+      "greeting": "Merry Christmas 2025",
+      "message": "Another year of love, laughter, and memories together. Wishing our family the warmest holiday season. May this Christmas bring us even closer and fill our hearts with joy.",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "accent": "#c41e3a"
+    },
+    {
+      "year": 2026,
+      "greeting": "Merry Christmas 2026",
+      "message": "Time flies, but the love we share only grows stronger. Here is to another beautiful Christmas together. May our home be filled with warmth, our table with feasts, and our hearts with gratitude.",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "accent": "#1a5c2a"
+    },
+    {
+      "year": 2027,
+      "greeting": "Merry Christmas 2027",
+      "message": "Three years of this little tradition and counting. Every Christmas with this family is a gift in itself. Wishing you peace, joy, and all the cookies you can eat.",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "accent": "#8b1a2b"
+    }
+  ],
+  "fallback": {
+    "greeting": "Merry Christmas",
+    "message": "Wishing you a wonderful holiday season filled with love and joy. This year does not have a custom message yet, but the sentiment is the same as always -- you are loved.",
+    "videoUrl": "",
+    "accent": "#c41e3a"
+  }
+}
